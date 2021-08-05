@@ -1,0 +1,14 @@
+.title-nav {
+    width: 100%;
+    background-color: rgba(250, 255, 209, 0.993);
+  }
+
+.barcolor {
+    background-color: rgba(250, 255, 209, 0.993);
+}
+
+
+h1 {
+    padding-bottom: 0.2em;
+    padding-left: 1em;
+}
