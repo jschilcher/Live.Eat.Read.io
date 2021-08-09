@@ -81,7 +81,7 @@ const Login = () => {
                 </div>
               </form>
               <div className="bottom text-center mb-5">
-              <p href="#" className="sm-text mx-auto mb-3">
+              <p href="/register" className="sm-text mx-auto mb-3">
                 Don't have an account?
                 <button className="btn btn-white ml-2">Sign Up!</button>
               </p>

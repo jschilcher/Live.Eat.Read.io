@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import "./app.css"
 import Title from "./Title/title"
 import Login from "./Login/login";
+import Register from "./Register/register";
 
 function App() {
     return (
@@ -10,6 +11,7 @@ function App() {
             <Title/>
             <Switch>
                 <Route path="/" exact component={Login}/>
+                <Route path="/register" component={Register}/>
             </Switch>
         </div>
     )
