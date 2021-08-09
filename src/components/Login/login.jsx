@@ -48,7 +48,6 @@ const Login = () => {
                 <div className="form-group">
                   {" "}
                   <label className="form-control-label text-muted">
-                    Email
                   </label>{" "}
                   <input
                     type="text"
@@ -61,7 +60,7 @@ const Login = () => {
                   <div className="form-group">
                     {" "}
                     <label className="form-control-label text-muted">
-                      Password
+                    
                     </label>{" "}
                     <input
                       type="password"
@@ -81,6 +80,12 @@ const Login = () => {
                   </div>
                 </div>
               </form>
+              <div className="bottom text-center mb-5">
+              <p href="#" className="sm-text mx-auto mb-3">
+                Don't have an account?
+                <button className="btn btn-white ml-2">Sign Up!</button>
+              </p>
+            </div>
       </div>
   );
 };
