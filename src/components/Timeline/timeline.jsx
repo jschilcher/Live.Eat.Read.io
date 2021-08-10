@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import NavBar from "../NavBar/navbar";
 
 const Timeline = () => {
     const [postData, setPostData] = useState([]);
@@ -18,7 +19,9 @@ const Timeline = () => {
       };
 
     return(
-        <div></div>
+        <div>
+            <NavBar/>
+        </div>
     );
 }
 export default Timeline;

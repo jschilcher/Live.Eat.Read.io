@@ -1,6 +1,7 @@
 import React, { useState, useEffect /*, PropTypes*/ } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import NavBar from "../NavBar/navbar";
 
 function Profile() {
     const username = JSON.parse(localStorage.getItem("specificUser"));
@@ -12,6 +13,7 @@ function Profile() {
 
     return (
         <div>
+            <NavBar/>
           <header>
             <div className="container">
               <div className="profile">

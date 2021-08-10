@@ -17,7 +17,7 @@ function App() {
                 <Route path="/register" component={Register}/>
                 <Route path="/profile" component={Profile}/>
                 <Route path="/timeline" component={Timeline}/>
-                <Route path="logout" component={Logout}/>
+                <Route path="/logout" component={Logout}/>
             </Switch>
         </div>
     )
