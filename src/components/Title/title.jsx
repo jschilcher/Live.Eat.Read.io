@@ -1,7 +1,7 @@
 import React from "react";
 import "../Title/title.css";
 
-function Title(props) {
+function Title() {
   return (
     <div className="row row-spacer barcolor">
       <div className="col-align">
