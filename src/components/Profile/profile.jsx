@@ -4,11 +4,21 @@ import axios from "axios";
 import NavBar from "../NavBar/navbar";
 
 function Profile() {
-    const username = JSON.parse(localStorage.getItem("specificUser"));
+    const user = JSON.parse(localStorage.getItem("specificUser"));
   
     let breakdown = "There is no user";
-    if (username) {
-      breakdown = username[0].username;
+    if (user) {
+      breakdown = user[0].username;
+    }
+
+    let firstName = "Josh Peck";
+    if(user) {
+        firstName = user[0].firstName;
+    }
+
+    let lastName = "Josh Peck";
+    if(user) {
+        lastName = user[0].lastName;
     }
 
     return (
@@ -25,7 +35,7 @@ function Profile() {
                 </div>
                 <div className="profile-user-settings">
                   <h1 className="profile-user-name">{`${breakdown}`}</h1>
-    
+                    <h5>{`${firstName}`} {`${lastName}`}</h5>
                   <button className="btn profile-edit-btn">Edit Profile</button>
 
                 </div>
