@@ -2,6 +2,7 @@ import React, { useState, useEffect /*, PropTypes*/ } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import NavBar from "../NavBar/navbar";
+import "./User.jpg"
 
 function Profile() {
     const user = JSON.parse(localStorage.getItem("specificUser"));
@@ -29,7 +30,7 @@ function Profile() {
               <div className="profile">
                 <div className="profile-image">
                   <img
-                    src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces"
+                    src="User.jpg"
                     alt=""
                   />
                 </div>
