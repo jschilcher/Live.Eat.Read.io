@@ -1,8 +1,8 @@
-import React, { useState, useEffect /*, PropTypes*/ } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import NavBar from "../NavBar/navbar";
-import "./User.jpg"
+
 
 function Profile() {
     const user = JSON.parse(localStorage.getItem("specificUser"));
@@ -37,14 +37,13 @@ function Profile() {
                 <div className="profile-user-settings">
                   <h1 className="profile-user-name">{`${breakdown}`}</h1>
                     <h5>{`${firstName}`} {`${lastName}`}</h5>
-                  <button className="btn profile-edit-btn">Edit Profile</button>
+                  <button className="btn profile-edit-btn">Upload Profile Image</button>
 
                 </div>
     
                 <div className="profile-bio">
                   <p>
-                    <span className="profile-real-name">{`${breakdown}`}</span>{" "}
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️
+    
                   </p>
                 </div>
               </div>

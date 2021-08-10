@@ -15,12 +15,17 @@ const Timeline = () => {
           .get("http://localhost:5000/api/collections/post")
           .then((response) => {
             setPostData(response.data);
+            console.log(response.data);
           });
       };
 
     return(
         <div>
             <NavBar/>
+            <div>
+                <h3>Create Post</h3>
+            </div>
+
         </div>
     );
 }
