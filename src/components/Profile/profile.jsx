@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import NavBar from "../NavBar/navbar";
 import Favorite from "../Favorite/favorite";
+import Recommended from "../Recommended/recommended";
 
 
 function Profile() {
@@ -51,6 +52,7 @@ function Profile() {
             </div>
           </header>{" "}
           <Favorite/>
+          <Recommended/>
         </div>
     );
 }

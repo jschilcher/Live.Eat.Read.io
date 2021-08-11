@@ -24,6 +24,9 @@ const Timeline = () => {
             <NavBar/>
             <div>
                 <h3>Create Post</h3>
+                <ul>
+                    {`${postData[0]}`}
+                </ul>
             </div>
 
         </div>
