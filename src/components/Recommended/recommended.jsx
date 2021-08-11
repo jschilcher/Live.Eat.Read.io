@@ -23,7 +23,7 @@ const Recommended = () => {
               <h3>Recommended for you</h3>
               <ul>
                   <li>
-                      {`${bookData[0]}`}
+                      {`${bookData.status}`}
                   </li>
               </ul>
           </div>

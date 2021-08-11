@@ -4,6 +4,7 @@ import axios from "axios";
 import NavBar from "../NavBar/navbar";
 import Favorite from "../Favorite/favorite";
 import Recommended from "../Recommended/recommended";
+import Current from "../Current/current";
 
 
 function Profile() {
@@ -53,6 +54,7 @@ function Profile() {
           </header>{" "}
           <Favorite/>
           <Recommended/>
+          <Current/>
         </div>
     );
 }
