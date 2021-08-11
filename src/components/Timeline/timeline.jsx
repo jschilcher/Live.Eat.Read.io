@@ -25,7 +25,8 @@ const Timeline = () => {
             <div>
                 <h3>Create Post</h3>
                 <ul>
-                    {`${postData[0]}`}
+                    <div>{`${postData[0].username}`}</div>
+                    {`${postData[0].text}`}
                 </ul>
             </div>
 
