@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
 import axios from "axios";
 import {NY_API} from "../../config/requests.json"
 
@@ -10,7 +10,7 @@ const Recommended = () => {
       }, []);
     
       const fetchAllBooks = async (event) => {
-        await axios
+        let response = await axios
           .get(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${NY_API}`)
           .then((response) => {
             setBookData(response.data);
@@ -18,22 +18,33 @@ const Recommended = () => {
           });
       };
 
-      let results = bookData.results;
+
+    
+    
+
+    //   let results = bookData.results;
     //   console.log("result", results.books[0]);
     //   let books = results.books[0];
     //   console.log("Book", books.author);
     //   let author = books.author;
-    
+
+    if(bookData[0] ===  undefined){
+        console.log(bookData);
+        return (
+            <div>Loading...</div>)}
+    else{ 
+        console.log("bookdata.results.books", bookData.results.books);
       return(
           <div>
               <h3>Recommended for you</h3>
               <ul>
                   <li>
-                      {/* {`${author}`} */}
+                      {`${bookData.results}`}
                   </li>
               </ul>
           </div>
-      )
+      );
+    }
 }
 
 export default Recommended;

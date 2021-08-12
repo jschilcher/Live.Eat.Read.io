@@ -5,6 +5,8 @@ import NavBar from "../NavBar/navbar";
 import Favorite from "../Favorite/favorite";
 import Recommended from "../Recommended/recommended";
 import Current from "../Current/current";
+import profileimage from "./User.png";
+// import "./profile.css";
 
 
 function Profile() {
@@ -31,10 +33,12 @@ function Profile() {
           <header>
             <div className="container">
               <div className="profile">
-                <div className="profile-image">
-                  <img
-                    src="https://unsplash.com/photos/OfaDD5o8hpk"
+                <div >
+                  <img className="profile-image"
+                    src={profileimage}
                     alt=""
+                    width="100"
+                    height="auto"
                   />
                 </div>
                 <div className="profile-user-settings">
