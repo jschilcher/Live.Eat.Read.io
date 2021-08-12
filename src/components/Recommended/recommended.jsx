@@ -17,13 +17,19 @@ const Recommended = () => {
             console.log(response.data);
           });
       };
+
+      let results = bookData.results;
+    //   console.log("result", results.books[0]);
+    //   let books = results.books[0];
+    //   console.log("Book", books.author);
+    //   let author = books.author;
     
       return(
           <div>
               <h3>Recommended for you</h3>
               <ul>
                   <li>
-                      {`${bookData.results}`}
+                      {/* {`${author}`} */}
                   </li>
               </ul>
           </div>

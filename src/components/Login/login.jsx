@@ -43,6 +43,7 @@ const Login = () => {
 
   return (
       <div>
+          <img src="" alt="" />
           <h2>Please login to your account</h2>
            <form onSubmit={handleSubmit} method="POST">
                 <div className="form-group">
