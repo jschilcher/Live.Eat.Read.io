@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import loginimage from "./coffeeandbookunsplash.jpg"
 
 const Login = () => {
   const [userData, setUserData] = useState([]);
@@ -43,7 +44,7 @@ const Login = () => {
 
   return (
       <div>
-          <img src="" alt="" />
+          <img src={loginimage} alt="" width="300" height="auto" />
           <h2>Please login to your account</h2>
            <form onSubmit={handleSubmit} method="POST">
                 <div className="form-group">

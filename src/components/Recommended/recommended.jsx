@@ -10,26 +10,16 @@ const Recommended = () => {
       }, []);
     
       const fetchAllBooks = async (event) => {
-        let response = await axios
+        await axios
           .get(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=${NY_API}`)
           .then((response) => {
             setBookData(response.data);
-            console.log(response.data);
+            console.log("response", response.data);
           });
       };
 
-
-    
-    
-
-    //   let results = bookData.results;
-    //   console.log("result", results.books[0]);
-    //   let books = results.books[0];
-    //   console.log("Book", books.author);
-    //   let author = books.author;
-
     if(bookData[0] ===  undefined){
-        console.log(bookData);
+        
         return (
             <div>Loading...</div>)}
     else{ 
@@ -39,7 +29,7 @@ const Recommended = () => {
               <h3>Recommended for you</h3>
               <ul>
                   <li>
-                      {`${bookData.results}`}
+                      {`${bookData.results.books[0].author}`}
                   </li>
               </ul>
           </div>
