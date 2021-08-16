@@ -19,18 +19,25 @@ const Timeline = () => {
           });
       };
 
+      if(postData[0] ===  undefined){
+        
+        return (
+            <div>Loading...</div>)}
+    else{ 
+        console.log("postdata", postData);
+
     return(
         <div>
             <NavBar/>
             <div>
                 <h3>Create Post</h3>
                 <ul>
-                    {/* <div>{`${postData[0].username}`}</div>
-                    {`${postData[0].text}`} */}
+                    <div>{`${postData[0].username}`}</div>
+                    {`${postData[0].text}`}
                 </ul>
             </div>
 
         </div>
     );
-}
+}}
 export default Timeline;
