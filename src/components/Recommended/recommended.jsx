@@ -6,6 +6,10 @@ const Recommended = () => {
     const [bookData, setBookData] = useState([]);
 
     useEffect(() => {
+        document.title = "Recommended - Live.Eat.Read.";
+      }, []);
+
+    useEffect(() => {
         fetchAllBooks();
       }, []);
     
@@ -15,7 +19,7 @@ const Recommended = () => {
           .then((response) => {
             setBookData(response.data);
             console.log("response", response.data);
-          });
+      }); 
       };
 
     if(bookData[0] ===  undefined){
