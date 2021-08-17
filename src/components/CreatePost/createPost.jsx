@@ -71,6 +71,7 @@ const CreatePost = () => {
                     <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
                     <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
                 </fieldset>
+                <input type="text" />
             {/* <input type="text" name="myImage" onChange={handleChange} /> */}
             <button type="submit">Upload Post</button>
         </form>
