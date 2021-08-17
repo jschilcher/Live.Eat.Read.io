@@ -14,7 +14,7 @@ const Register = (props) => {
     // let [jwt,setJWT] = useState(localStorage.getItem("token"));
   
     useEffect(() => {
-      document.title = "Register - WizardGram";
+      document.title = "Register - Live.Eat.Read";
     }, []);
   
     const handleSubmit = async (event) => {

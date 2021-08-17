@@ -32,14 +32,52 @@ const Timeline = () => {
             <NavBar/>
             <div>
                 <CreatePost/>
-                <ul>
-                    <div>{`${postData[0].username}`}</div>
-                    <img src={`${postData[0].image}`} alt="" />
-                    {`${postData[0].text}`}
-                </ul>
+                <head>
+	                <meta charset="utf-8" />
+	                <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+	                <title></title>
+	                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	                <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
+	                <link rel="stylesheet" href="main.css" /> 
+                </head>
+                <body>
+
+	                <section class="container">
+		                <div class="card">
+		                  <div class="card-header">
+		                    <div class="profile-img">
+			                    {/* <img class="profile-img" src="https://i.pinimg.com/736x/a2/e1/8c/a2e18cbfbcaa8756fe5b40f472eeff45--profile-   picture-profile-pics.jpg"/> */}
+		                    </div>
+		                    <div class="profile-info">
+			                    <div class="name">{`${postData[0].username}`}</div>
+		                    </div>
+		                    {/* <div class="time">
+			                    1hr
+		                    </div> */}
+		                </div>
+		                <div class="content">
+			                <img src={`${postData[0].image}`} class="content" />
+		                </div>
+		                <div class="card-footer">
+			              <div class="footer-content">
+                    <p><span>{`${postData[0].text}`}</span></p>
+				              <span class="likes">241 likes</span> 
+					          <p><span>{`${postData[0].comment}`}</span></p>
+				            <form class="form">
+					          <span class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
+					           <span class="add-comment"><input type="text" placeholder="Add a comment..." /></span>
+					            <span class="options"><i class="fa fa-ellipsis-h"></i></span>
+				            </form>
+			              </div>
+		                </div>
+	                  </div>
+	                </section>
+                </body>
             </div>
 
         </div>
     );
 }}
+
+
 export default Timeline;
