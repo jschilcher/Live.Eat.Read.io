@@ -8,6 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
+  const handleClick = () => history.push("/register");
   let specificUser;
 
   useEffect(() => {
@@ -85,7 +86,7 @@ const Login = () => {
               <div className="bottom text-center mb-5">
               <p href="/register" className="sm-text mx-auto mb-3">
                 Don't have an account?
-                <button className="btn btn-white ml-2">Sign Up!</button>
+                <button className="btn btn-white ml-2" onClick={handleClick}>Sign Up!</button>
               </p>
             </div>
       </div>
