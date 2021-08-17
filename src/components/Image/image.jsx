@@ -24,7 +24,7 @@ const Image = () => {
     return(
         <form onSubmit={handleSubmit}>
             <h1>Image Upload</h1>
-            <input type="image" name="myImage" onChange={handleChange} />
+            <input type="file" name="myImage" onChange={handleChange} />
             <button type="submit">Upload Image</button>
         </form>
     

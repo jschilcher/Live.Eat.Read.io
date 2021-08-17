@@ -6,6 +6,7 @@ import Favorite from "../Favorite/favorite";
 import Recommended from "../Recommended/recommended";
 import Current from "../Current/current";
 import profileimage from "./User.png";
+import Image from "../Image/image";
 // import "./profile.css";
 
 
@@ -41,6 +42,7 @@ function Profile() {
                     height="auto"
                   />
                 </div>
+                <Image/>
                 <div className="profile-user-settings">
                   <h1 className="profile-user-name">{`${username}`}</h1>
                     <h5>{`${firstName}`} {`${lastName}`}</h5>

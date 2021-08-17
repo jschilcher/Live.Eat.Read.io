@@ -34,6 +34,7 @@ const Timeline = () => {
                 <CreatePost/>
                 <ul>
                     <div>{`${postData[0].username}`}</div>
+                    <img src={`${postData[0].image}`} alt="" />
                     {`${postData[0].text}`}
                 </ul>
             </div>
