@@ -33,12 +33,20 @@ const Recommended = () => {
       return(
           <div>
               <h3>Recommended for you</h3>
-              <div className="card" style={{width: 18}}>
+              <div className="card" style={{width: 200}}>
                 <img src={`${bookData[0].image}`} className="card-img-top" alt="" />
                 <div className="card-body">
                   <h5 className="card-title">{`${bookData[0].title}`}</h5>
                   <h6>{`${bookData[0].author}`}</h6>
                   <p className="card-text">{`${bookData[0].description}`}</p>
+                </div>
+              </div>
+              <div className="card" style={{width: 200}}>
+                <img src={`${bookData[1].image}`} className="card-img-top" alt="" />
+                <div className="card-body">
+                  <h5 className="card-title">{`${bookData[1].title}`}</h5>
+                  <h6>{`${bookData[1].author}`}</h6>
+                  <p className="card-text">{`${bookData[1].description}`}</p>
                 </div>
               </div>
               <ul>
