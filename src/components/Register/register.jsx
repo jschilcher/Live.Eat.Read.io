@@ -9,6 +9,7 @@ const Register = (props) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const history = useHistory("/profile");
+    const handleClick = () => history.push("/");
     let specificUser;
     // let [jwt,setJWT] = useState(localStorage.getItem("token"));
   
@@ -113,7 +114,7 @@ const Register = (props) => {
           </button>
         </div>
 
-        <a class="d-block text-center mt-2 small" href="/profile">
+        <a class="d-block text-center mt-2 small" href="/">
           Have an account? Sign In
         </a>
 

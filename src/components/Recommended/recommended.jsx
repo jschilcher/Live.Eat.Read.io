@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 import axios from "axios";
 import {NY_API} from "../../config/requests.json"
 
@@ -32,6 +33,14 @@ const Recommended = () => {
       return(
           <div>
               <h3>Recommended for you</h3>
+              <div className="card" style={{width: 18}}>
+                <img src={`${bookData[0].image}`} className="card-img-top" alt="" />
+                <div className="card-body">
+                  <h5 className="card-title">{`${bookData[0].title}`}</h5>
+                  <h6>{`${bookData[0].author}`}</h6>
+                  <p className="card-text">{`${bookData[0].description}`}</p>
+                </div>
+              </div>
               <ul>
                   <li>
                       {`${bookData[0].author}`}
