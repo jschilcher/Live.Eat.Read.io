@@ -18,7 +18,7 @@ const Image = () => {
     };
 
     const handleChange = (event) => {
-        setImage({file:event.target.files[0]});
+        setImage({image:event.target.files[0]});
     }
 
     return(

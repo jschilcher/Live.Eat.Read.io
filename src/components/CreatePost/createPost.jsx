@@ -18,7 +18,7 @@ const CreatePost = () => {
     };
 
     const handleChange = (event) => {
-        setImage({file:event.target.files[0]});
+        setCreatePost({createPost:event.target.files[0]});
     }
 
     return(
