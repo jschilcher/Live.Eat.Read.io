@@ -1,30 +1,64 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 const CreatePost = () => {
-    const [createPost, setCreatePost] = useState();
+    const [username, setUsername] = useState("");
+    const [text, setText] = useState("");
+    const [rating, setRating] = useState("");
+    const history = useHistory("/timeline");
 
-
-    const handleSubmit = (event) => {
+    useEffect(() => {
+        document.title = "Register - WizardGram";
+      }, []);
+    
+      const handleSubmit = async (event) => {
         event.preventDefault();
-        const formData = new FormData();
-        formData.append("createpost", createPost);
-        const config = {
-            headers: {"content-type": "multipart/form-data"}
-        };
-        axios.post("http://localhost:5000/api/")
-        .then(response => alert("Post uploaded"))
-        .catch((error) => {})
-    };
+    
+        try {
+          let post = {
+            username: username,
+            text: text,
+            rating: rating,
+          };
+          
+          await axios.post(
+            "http://localhost:5000/api/collections/post",
+          
+            post
+          );
+    
+          alert(
+            "Uploaded post! Please Click 'OK'"
+          );
+          history.push("/timeline");
+        } catch {
+          console.log("HandleSubmit has failed");
+        }
+      };
+  
 
-    const handleChange = (event) => {
-        setCreatePost({createPost:event.target.files[0]});
-    }
+
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+    //     const formData = new FormData();
+    //     formData.append("createpost", createPost);
+    //     const config = {
+    //         headers: {"content-type": "multipart/form-data"}
+    //     };
+    //     axios.post("http://localhost:5000/api/")
+    //     .then(response => alert("Post uploaded"))
+    //     .catch((error) => {})
+    // };
+
+    // const handleChange = (event) => {
+    //     setCreatePost({createPost:event.target.files[0]});
+    // }
 
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} method="post">
             <h1>Create Post</h1>
-            <input type="image" name="myImage" onChange={handleChange} />
+            {/* <input type="text" name="myImage" onChange={handleChange} /> */}
             <button type="submit">Upload Post</button>
         </form>
     

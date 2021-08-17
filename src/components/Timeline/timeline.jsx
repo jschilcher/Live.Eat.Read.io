@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import NavBar from "../NavBar/navbar";
+import CreatePost from "../CreatePost/createPost";
 
 const Timeline = () => {
     const [postData, setPostData] = useState([]);
@@ -30,7 +31,7 @@ const Timeline = () => {
         <div>
             <NavBar/>
             <div>
-                <h3>Create Post</h3>
+                <CreatePost/>
                 <ul>
                     <div>{`${postData[0].username}`}</div>
                     {`${postData[0].text}`}
