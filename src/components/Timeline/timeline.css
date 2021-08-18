@@ -1,18 +1,4 @@
-@import "reset"; 
-
-body {
-	background: #fafafa;
-}
-
-header {
-	background: #fafafa;
-	border-bottom: 1px solid #ccc;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index:20;
-}
+/* @import "reset";  */
 
 a {
 	box-sizing: border-box;
@@ -33,12 +19,10 @@ a {
 }
 
 .container {
-	background: #fafafa;
 	padding-top: 50px;
-	height: 100%;
-	width: 100%;
+	height: 50%;
+	width: 50%;
 	position: absolute;
-	top: 58px;
 	bottom: 0;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -53,7 +37,7 @@ a {
 }
 
 .card-header {
-	padding: 15px;
+	padding: 0px;
 }
 
 .profile-img {

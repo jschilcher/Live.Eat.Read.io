@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import axios from "axios";
 import NavBar from "../NavBar/navbar";
 import CreatePost from "../CreatePost/createPost";
+import "./timeline.css";
 
 const Timeline = () => {
     const [postData, setPostData] = useState([]);
@@ -28,6 +29,7 @@ const Timeline = () => {
         console.log("postdata", postData);
 
     return(
+      
         <div>
             <NavBar/>
             <div>
@@ -60,9 +62,10 @@ const Timeline = () => {
 		                </div>
 		                <div class="card-footer">
 			              <div class="footer-content">
+                    <p>Rating: <span>{`${postData[0].rating}`}</span></p>
                     <p><span>{`${postData[0].text}`}</span></p>
 				              <span class="likes">241 likes</span> 
-					          <p><span>{`${postData[0].comment}`}</span></p>
+					          <p><span>{`${postData[0].comment[0].username}`}: {`${postData[0].comment[0].text}`}</span></p>
 				            <form class="form">
 					          <span class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
 					           <span class="add-comment"><input type="text" placeholder="Add a comment..." /></span>
