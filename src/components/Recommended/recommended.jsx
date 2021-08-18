@@ -34,7 +34,7 @@ const Recommended = () => {
           <div>
               <h3>Recommended for you</h3>
               {bookData.map((book) => (
-              <div className="card" style={{width: 200}}>
+              <div className="book-card" style={{width: 200}}>
                 <img src={`${book.image}`} className="card-img-top" alt="" />
                 <div className="card-body">
                   <h5 className="card-title">{`${book.title}`}</h5>
@@ -51,11 +51,6 @@ const Recommended = () => {
                   <p className="card-text">{`${bookData[1].description}`}</p>
                 </div>
               </div> */}
-              <ul>
-                  <li>
-                      {`${bookData[0].author}`}
-                  </li>
-              </ul>
           </div>
       );
     }

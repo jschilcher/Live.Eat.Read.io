@@ -43,7 +43,7 @@ const Timeline = () => {
 	                <link rel="stylesheet" href="main.css" /> 
                 </head>
                 <body>
-
+                {postData.map((post) => (
 	                <section class="container">
 		                <div class="card">
 		                  <div class="card-header">
@@ -58,14 +58,14 @@ const Timeline = () => {
 		                    </div> */}
 		                </div>
 		                <div class="content">
-			                <img src={`${postData[0].image}`} class="content" />
+			                <img src={`${post.image}`} class="content" />
 		                </div>
 		                <div class="card-footer">
 			              <div class="footer-content">
-                    <p>Rating: <span>{`${postData[0].rating}`}</span></p>
-                    <p><span>{`${postData[0].text}`}</span></p>
+                    <p>Rating: <span>{`${post.rating}`}</span></p>
+                    <p><span>{`${post.text}`}</span></p>
 				              <span class="likes">241 likes</span> 
-					          <p><span>{`${postData[0].comment[0].username}`}: {`${postData[0].comment[0].text}`}</span></p>
+					          <p><span>{`${post.comment[0].username}`}: {`${post.comment[0].text}`}</span></p>
 				            <form class="form">
 					          <span class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
 					           <span class="add-comment"><input type="text" placeholder="Add a comment..." /></span>
@@ -75,6 +75,7 @@ const Timeline = () => {
 		                </div>
 	                  </div>
 	                </section>
+                  ))}
                 </body>
             </div>
 
