@@ -51,7 +51,7 @@ const Timeline = () => {
 			                    {/* <img class="profile-img" src="https://i.pinimg.com/736x/a2/e1/8c/a2e18cbfbcaa8756fe5b40f472eeff45--profile-   picture-profile-pics.jpg"/> */}
 		                    </div>
 		                    <div class="profile-info">
-			                    <div class="name">{`${postData[0].username}`}</div>
+			                    <div class="name">{`${post.username}`}</div>
 		                    </div>
 		                    {/* <div class="time">
 			                    1hr
