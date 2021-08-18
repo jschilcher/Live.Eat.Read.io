@@ -7,7 +7,7 @@ import Recommended from "../Recommended/recommended";
 import Current from "../Current/current";
 import profileimage from "./User.png";
 import Image from "../Image/image";
-// import "./profile.css";
+import "./profile.css";
 
 
 function Profile() {
@@ -32,7 +32,7 @@ function Profile() {
         <div>
             <NavBar/>
           <header>
-            <div className="container">
+            <div className="profile-container">
               <div className="profile">
                 <div >
                   <img className="profile-image"
@@ -41,12 +41,13 @@ function Profile() {
                     width="100"
                     height="auto"
                   />
+                  <Image/>
                 </div>
-                <Image/>
+              
                 <div className="profile-user-settings">
                   <h1 className="profile-user-name">{`${username}`}</h1>
                     <h5>{`${firstName}`} {`${lastName}`}</h5>
-                  <button className="btn profile-edit-btn">Upload Profile Image</button>
+                  {/* <button className="btn profile-edit-btn">Upload Profile Image</button> */}
 
                 </div>
     
@@ -58,9 +59,11 @@ function Profile() {
               </div>
             </div>
           </header>{" "}
+          <div>
           <Favorite/>
           <Recommended/>
           <Current/>
+          </div>
         </div>
     );
 }
