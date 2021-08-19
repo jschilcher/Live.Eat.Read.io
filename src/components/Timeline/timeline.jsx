@@ -32,40 +32,29 @@ const Timeline = () => {
       
         <div>
             <NavBar/>
-            <div>
-                <CreatePost/>
-                <head>
-	                <meta charset="utf-8" />
-	                <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
-	                <title></title>
-	                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
-	                <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/>
-	                <link rel="stylesheet" href="main.css" /> 
-                </head>
+            <CreatePost/>
+            {postData.map((post) => (
+            <div> 
                 <body>
-                {postData.map((post) => (
-	                <section class="container">
-		                <div class="card">
-		                  <div class="card-header">
-		                    <div class="profile-img">
-			                    {/* <img class="profile-img" src="https://i.pinimg.com/736x/a2/e1/8c/a2e18cbfbcaa8756fe5b40f472eeff45--profile-   picture-profile-pics.jpg"/> */}
+                
+	                <section className="container">
+		                <div className="card">
+		                  <div className="card-header">
+		                    <div className="profile-img">
 		                    </div>
-		                    <div class="profile-info">
-			                    <div class="name">{`${post.username}`}</div>
+		                    <div className="profile-info">
+			                    <div className="name">{`${post.username}`}</div>
 		                    </div>
-		                    {/* <div class="time">
-			                    1hr
-		                    </div> */}
 		                </div>
-		                <div class="content">
-			                <img src={`${post.image}`} class="content" />
+		                <div className="content">
+			                <img src={`${post.image}`} className="content" alt="" />
 		                </div>
 		                <div class="card-footer">
 			              <div class="footer-content">
                     <p>Rating: <span>{`${post.rating}`}</span></p>
                     <p><span>{`${post.text}`}</span></p>
 				              <span class="likes">241 likes</span> 
-					          <p><span>{`${post.comment[0].username}`}: {`${post.comment[0].text}`}</span></p>
+					          {/* <p><span>{`${post.comment[0].username}`}: {`${post.comment[0].text}`}</span></p> */}
 				            <form class="form">
 					          <span class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
 					           <span class="add-comment"><input type="text" placeholder="Add a comment..." /></span>
@@ -75,10 +64,11 @@ const Timeline = () => {
 		                </div>
 	                  </div>
 	                </section>
-                  ))}
+                 
                 </body>
+               
             </div>
-
+            ))}
         </div>
     );
 }}

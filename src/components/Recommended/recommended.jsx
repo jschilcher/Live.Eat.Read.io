@@ -28,7 +28,7 @@ const Recommended = () => {
         return (
             <div>Loading...</div>)}
     else{ 
-        console.log('Got into that else block')
+        
         console.log(bookData)
       return(
           <div>

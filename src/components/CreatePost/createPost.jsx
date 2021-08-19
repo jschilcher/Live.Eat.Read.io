@@ -40,46 +40,38 @@ const CreatePost = () => {
 
 
     return(
-        // <form onSubmit={handleSubmit} method="post">
-        //     <h1>Create Post</h1>
-        //         <input type="text" name="text" placeholder="Please share your book here" />
-             
-        //         <input type="text" />
-        //     {/* <input type="text" name="myImage" onChange={handleChange} /> */}
-        //     <button type="submit">Upload Post</button>
-        // </form>
 
-<div className="post-container">
-<div className="row" >
-  <div className="col-md-6">
-    <div className="well well-sm">
+        <div className="post-container">
+        <div className="row" >
+        <div className="col-md-6">
+            <div >
 
-      <div className="row" id="post-review-box">
-        <div className="col-md-12">
-        <form onSubmit={handleSubmit} accept-charset="UTF-8" method="post">
-          <h3>Create Post</h3>
+            <div className="row" id="post-review-box">
+                <div className="col-md-12">
+                <form onSubmit={handleSubmit} accept-charset="UTF-8" method="post">
+                <h3>Create Post</h3>
 
-            <input type="text" id="username" name="username" placeholder="Username" className="form-control" onChange={({target}) => setUsername(target.value)}/>
-            <input type="text" id="rating" name="rating" placeholder="Rating" className="form-control" onChange={({target}) => setRating(target.value)}/>
-            <textarea class="form-control animated" cols="50" id="new-review" name="text" placeholder="Tell us about your book here!" rows="5"></textarea>
+                    <input type="text" id="username" name="username" placeholder="Username" className="form-control" onChange={({target}) => setUsername(target.value)}/>
+                    <input type="text" id="rating" name="rating" placeholder="Rating" className="form-control" onChange={({target}) => setRating(target.value)}/>
+                    <textarea className="form-control animated" cols="50" id="new-review" name="text" placeholder="Tell us about your book here!" rows="5"></textarea>
 
-            <div class="text-right">
-          
-            <input
-                        className="btn-block btn-color"
-                        type="submit"
-                        value="Post"
-                      />
-           
+                    <div >
+                
+                    <input
+                                className="btn-block btn-color"
+                                type="submit"
+                                value="Post"
+                            />
+                
+                    </div>
+                </form>
+                </div>
             </div>
-          </form>
-        </div>
-      </div>
-    </div>
+            </div>
 
-  </div>
-</div>
-</div>
+        </div>
+        </div>
+        </div>
     
     )
 

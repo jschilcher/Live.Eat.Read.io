@@ -5,6 +5,12 @@ import {Google_API} from "../../config/requests.json";
 
 const Current = () => {
     const [currentBookData, setCurrentBookData] = useState([]);
+    const [searchResult, setSearchResult] = useState("");
+
+    const handleSubmit = (event) => {
+      event.preventDefault();
+      fetchCurrentBook();
+    }
 
     useEffect(() => {
         fetchCurrentBook();
@@ -12,7 +18,7 @@ const Current = () => {
     
       const fetchCurrentBook = async (event) => {
         await axios
-          .get(`https://www.googleapis.com/books/v1/volumes?q=searchquery&orderBy=newest&key=${Google_API}`)
+          .get(`https://www.googleapis.com/books/v1/volumes?q=${searchResult}&orderBy=newest&key=${Google_API}`)
           .then((response) => {
             setCurrentBookData(response.data);
             console.log(response.data);
@@ -22,8 +28,8 @@ const Current = () => {
     return (
         <div>
             <h3>I am currently reading</h3>
-            <form>
-                <input type="text" placeholder="Search books" />
+            <form onSubmit={handleSubmit}>
+                <input type="text" placeholder="Search books" onChange={({target}) => setSearchResult(target.value)}/>
                 <button type="submit">Search</button>
             </form>
         </div>
