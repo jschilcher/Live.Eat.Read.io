@@ -33,7 +33,20 @@ const Timeline = () => {
         <div>
             <NavBar/>
             <CreatePost/>
+
             {postData.map((post) => (
+              <div className="post-card" style={{width: 200}}>
+                <img src={`${post.image}`} className="card-img-top" alt="" />
+                <div className="card-body">
+                  <h5 className="card-title">{`${post.username}`}</h5>
+                  <h6>Rating: {`${post.rating}`}</h6>
+                  <h7>Likes: {`${post.like}`}</h7>
+                  <p className="card-text">{`${post.text}`}</p>
+                </div>
+              </div>
+              ))}
+
+            {/* {postData.map((post) => (
             <div> 
                 <body>
                 
@@ -54,7 +67,7 @@ const Timeline = () => {
                     <p>Rating: <span>{`${post.rating}`}</span></p>
                     <p><span>{`${post.text}`}</span></p>
 				              <span class="likes">241 likes</span> 
-					          {/* <p><span>{`${post.comment[0].username}`}: {`${post.comment[0].text}`}</span></p> */}
+					          <p><span>{`${post.comment[0].username}`}: {`${post.comment[0].text}`}</span></p>
 				            <form class="form">
 					          <span class="heart"><i class="fa fa-heart-o" aria-hidden="true"></i></span>
 					           <span class="add-comment"><input type="text" placeholder="Add a comment..." /></span>
@@ -68,7 +81,7 @@ const Timeline = () => {
                 </body>
                
             </div>
-            ))}
+            ))} */}
         </div>
     );
 }}
