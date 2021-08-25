@@ -9,6 +9,7 @@ const Current = () => {
 
     const handleSubmit = (event) => {
       event.preventDefault();
+      console.log("Here is the search", searchResult)
       fetchCurrentBook();
     }
 
@@ -20,8 +21,8 @@ const Current = () => {
         await axios
           .get(`https://www.googleapis.com/books/v1/volumes?q=${searchResult}&orderBy=newest&key=${Google_API}`)
           .then((response) => {
-            setCurrentBookData(response.data.items);
-            console.log(response.data);
+            setCurrentBookData(response.data.items[0].volumeInfo);
+            console.log("got it", response.data.items[0].volumeInfo);
           });
       };
 
