@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import "./register.css"
 
 const Register = (props) => {
     const [firstname, setFirstName] = useState("");
@@ -46,8 +47,12 @@ const Register = (props) => {
     };
 
     return (
+      <div className="reg-container">
         <form onSubmit={handleSubmit}>
         <div class="form-floating mb-3">
+        <label className="form-control-label text-muted">
+                    First Name
+                    </label>{" "}
           <input
             type="text"
             class="form-control"
@@ -60,6 +65,9 @@ const Register = (props) => {
         </div>
 
         <div class="form-floating mb-3">
+        <label className="form-control-label text-muted">
+                    Last Name
+                    </label>{" "}
           <input
             type="text"
             class="form-control"
@@ -72,6 +80,9 @@ const Register = (props) => {
         </div>
 
         <div class="form-floating mb-3">
+        <label className="form-control-label text-muted">
+                    Username
+                    </label>{" "}
           <input
             type="text"
             class="form-control"
@@ -84,6 +95,9 @@ const Register = (props) => {
         </div>
 
         <div class="form-floating mb-3">
+        <label className="form-control-label text-muted">
+                    Email
+                    </label>{" "}
           <input
             type="email"
             class="form-control"
@@ -96,6 +110,9 @@ const Register = (props) => {
         <hr />
 
         <div class="form-floating mb-3">
+        <label className="form-control-label text-muted">
+                    Password
+                    </label>{" "}
           <input
             type="password"
             class="form-control"
@@ -121,6 +138,7 @@ const Register = (props) => {
         <hr class="my-4" />
 
       </form>
+      </div>
     );
 }
 
