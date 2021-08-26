@@ -55,7 +55,7 @@ const CreatePost = () => {
 
                     <input type="text" id="username" name="username" placeholder="Username" className="form-control" onChange={({target}) => setUsername(target.value)}/>
                     <textarea className="form-control animated" cols="50" id="new-review" name="text" placeholder="Tell us about your book here!" rows="5" onChange={({target}) => setText(target.value)}></textarea>
-                    <input type="text" id="image" name="image" placeholder="Image" className="form-control" onChange={({target}) => setImage(target.value)}/>
+                    <input type="text" id="image" name="image" placeholder="Image link" className="form-control" onChange={({target}) => setImage(target.value)}/>
                     <input type="text" id="rating" name="rating" placeholder="Rating" className="form-control" onChange={({target}) => setRating(target.value)}/>
                     
 
